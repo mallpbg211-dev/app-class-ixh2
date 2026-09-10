@@ -19,13 +19,14 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    # 1. Mengembalikan file debug.keystore dari base64
-    - name: Restore Debug Keystore
+    # 1. Membuat debug.keystore langsung di runner (tidak perlu base64/secret)
+    - name: Generate Debug Keystore
       run: |
-        if [ -f debug.keystore.base64 ]; then
-          base64 -d debug.keystore.base64 > debug.keystore
-          echo "Debug keystore berhasil dipulihkan."
-        fi
+        keytool -genkey -v -keystore debug.keystore \
+          -storepass android -alias androiddebugkey \
+          -keypass android -keyalg RSA -keysize 2048 -validity 10000 \
+          -dname "CN=Android Debug,O=Android,C=US"
+        echo "Debug keystore berhasil dibuat."
 
     # 2. Mengunci versi Gradle ke 9.3.1 (kompatibel penuh)
     - name: Setup Gradle
@@ -43,3 +44,4 @@ jobs:
       with:
         name: Aplikasi-Kelas-IX-H
         path: app/build/outputs/apk/debug/*.apk
+        
