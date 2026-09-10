@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Graduation Cap / Mortarboard Emblem -->
+    <!-- Cap top diamond -->
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M54,34 L78,44 L54,54 L30,44 Z" />
+    <!-- Cap skullcap base -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M38,48 L38,58 C38,65 70,65 70,58 L70,48 L54,55 Z" />
+    <!-- Tassel string & drop -->
+    <path
+        android:strokeColor="#F59E0B"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M66,49 C74,53 76,60 76,66" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M74,66 L78,66 L76,73 Z" />
+    <!-- Open Book Below -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M32,68 C39,64 48,65 54,69 C60,65 69,64 76,68 L76,77 C69,73 60,74 54,78 C48,74 39,73 32,77 Z" />
+    <path
+        android:strokeColor="#0284C7"
+        android:strokeWidth="1.2"
+        android:fillColor="#00000000"
+        android:pathData="M54,69 L54,78" />
+    <!-- Golden Star Emblem -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M54,23 L55.8,28.5 L61.5,28.5 L56.9,31.8 L58.7,37.3 L54,34 L49.3,37.3 L51.1,31.8 L46.5,28.5 L52.2,28.5 Z" />
+</vector>
