@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "109876543210",
+    "project_id": "apk-class-ix-h",
+    "storage_bucket": "apk-class-ix-h.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109876543210:android:0a1b2c3d4e5f6a7b8c9d0e",
+        "android_client_info": {
+          "package_name": "com.aistudio.ixhhub.kdmx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_apk_class_ix_h_firestore_key"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
