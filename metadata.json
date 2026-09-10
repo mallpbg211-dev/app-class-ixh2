@@ -1,0 +1,6 @@
+{
+  "name": "IX-H Hub",
+  "description": "Aplikasi kelas IX-H bertema Glassmorphism dengan profil foto 32 siswa, pencatatan kas harian per siswa & tanggal oleh bendahara, serta Pusat Kendali Admin untuk mengatur seluruh isi aplikasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
