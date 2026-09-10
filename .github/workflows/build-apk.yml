@@ -18,14 +18,26 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
 
+    # 1. Mengembalikan file debug.keystore dari base64
+    - name: Restore Debug Keystore
+      run: |
+        if [ -f debug.keystore.base64 ]; then
+          base64 -d debug.keystore.base64 > debug.keystore
+          echo "Debug keystore berhasil dipulihkan."
+        fi
+
+    # 2. Mengunci versi Gradle ke 9.3.1 (kompatibel penuh)
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: '9.3.1'
 
+    # 3. Build APK dengan mode headless
     - name: Build Debug APK
-      run: gradle assembleDebug --stacktrace
+      run: gradle assembleDebug --no-daemon --stacktrace
 
+    # 4. Simpan APK ke menu Artifacts
     - name: Simpan File APK
       uses: actions/upload-artifact@v4
       with:
